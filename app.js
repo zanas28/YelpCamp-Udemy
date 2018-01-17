@@ -20,6 +20,19 @@ app.get('/campgrounds', (req, res) => {
     res.render('campgrounds', {campgrounds: campgrounds});
 });
 
+app.post('/campgrounds', (req, res) => {
+    let name = req.body.name;
+    let image = req.body.image;
+    let newCampgrounds = {name: name, image: image};
+    campgrounds.push(newCampgrounds);
+
+    res.redirect('/campgrounds');
+});
+
+app.get('/campgrounds/new', (req, res) => {
+    res.render('new');
+});
+
 app.listen(3000, () => {
     console.log('The Server has been running in localhost:3000');
 });
