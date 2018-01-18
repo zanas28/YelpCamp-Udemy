@@ -1,5 +1,7 @@
 <% include partials/headers %>
 
+<!-- in input name must same as name in request body (key) -->
+
 <div class="container">
     <h4 style="text-align: center; margin-top: 5%;">Create a New Campground</h4>
     <div class="row">
@@ -10,6 +12,9 @@
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name='image', placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name='description', placeholder="Description">
                 </div>
                 <button class="btn btn-primary btn-block">Submit</button>
             </form>
